@@ -1,0 +1,143 @@
+<div class="content-box singin_signup  grid-x grid-padding-x">
+  <div class="cell align-self-middle">
+  <div class="sign-in-logo"><a routerLink="/" title="Tournament Edition"><img src="/assets/img/bar_logo.png" /></a></div>
+  <h1>CREATE ACCOUNT</h1>
+  <!-- <h1>Forgot Password?</h1>
+  <h1>Resend Verification Mail</h1> -->
+
+  <div class="login_box ng-cloak" id="login_box">
+    <div class="login_box_body">
+      <div class="row">
+        <div class="login_box_login">
+
+          <div class="signin-container">
+            <form class="form-signin" autocomplete="off" (ngSubmit)="onSignupFormSubmit()">
+
+              <table class="register_table">
+                <tr>
+                  <td>
+                    <label for="username" class="sr-only">User Name</label>
+                    <input formControlName="username" id="register_username" type="text" class="form-control"
+                      placeholder="Username" >
+                    <!-- <span *ngIf="!signupForm.get('UserName').value && signupForm.get('UserName').touched">User Name is required</span>   -->
+                    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                      <div *ngIf="f.username.errors.required" class="msg-error">User name is required</div>
+                    </div>
+                  </td>
+                <tr>
+                  <td>
+
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input formControlName="email" id="register_email" type="text" class="form-control"
+                      placeholder="Email" >
+                    <!-- <span *ngIf="!signupForm.get('UserName').value && signupForm.get('UserName').touched">User Name is required</span>   -->
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback msg-error">
+                      <div *ngIf="f.email.errors.required">Email is required</div>
+                      <div *ngIf="f.email.errors.pattern">Email is not valid</div>
+                    </div>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input formControlName="password" id="register_password" type="password" class="form-control"
+                      placeholder="Password" autocomplete="new-password" passwordToggle
+                      />
+                    <!-- <span *ngIf="!signupForm.get('Password').value && signupForm.get('Password').touched">Password is required.</span>   -->
+                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback msg-error">
+                      <div *ngIf="f.password.errors.required">Password is required</div>
+                      <div *ngIf="f.password.errors.minlength">Minimum 8 characters are required</div>
+                      <div *ngIf="f.password.errors.maxlength">Maximum 12 characters are allowed</div>
+                      <div *ngIf="f.password.errors.hasNumber">Password must contain at least 1 number</div>
+                      <div *ngIf="f.password.errors.hasCapitalCase">Password must contain at least 1 letter in
+                        capital case</div>
+                      <div *ngIf="f.password.errors.hasSmallCase">Password must contain at least 1 letter in small
+                        case</div>
+                      <div *ngIf="f.password.errors.hasSpecial">Password must contain 1 special character</div>
+                      <div *ngIf="f.password.errors.hasSpace">Password cannot contain spaces</div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="confirmpassword" class="sr-only">Confirm Password</label>
+                    <input formControlName="confirmpassword" id="register_password" type="password" class="form-control"
+                      placeholder="Confirm Password" autocomplete="on" passwordToggle
+                       />
+                    <!-- <span *ngIf="!signupForm.get('Password').value && signupForm.get('Password').touched">Password is required.</span>   -->
+                    <div *ngIf="submitted && f.confirmpassword.errors" class="invalid-feedback msg-error">
+                      <div *ngIf="f.confirmpassword.errors.required">Confirm Password is required</div>
+                      <div *ngIf="f.confirmpassword.errors.mustMatch">Passwords must match</div>
+                    </div>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <br>
+                    <p class="terms_text border-top-10"> <input type="checkbox" class="terms_checkbox"
+
+                        formControlName="isAgreeCheckbox" name="isAgreeCheckbox"> I agree to the <a routerLink="/terms"
+                        target="_blank">Terms and Conditions</a> and
+                      <a routerLink="/privacy" target="_blank">Privacy Policy</a></p>
+                    <span
+                      *ngIf="(submitted || f.isAgreeCheckbox.dirty || f.isAgreeCheckbox.touched) && f.isAgreeCheckbox.errors"
+                      errorClass="invalid-feedback" class="invalid-feedback is-invalid-label">
+                      <i *ngIf="f.isAgreeCheckbox.errors.required">Terms and Conditions and Privacy Policy required.</i>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="btn btn-info btn-block float-right m-0" id="register_sign_up_button"
+                      type="submit">Sign Up</button>
+                  </td>
+                </tr>
+
+              </table>
+
+            </form>
+          </div>
+
+          <h2 class="hr-seperator"><span>OR</span></h2>
+          <div id="login-social">
+            <div class="social_login">
+              <a title="Facebook" href="/network/login/facebook">
+                <div class="login_fb"><i class="fab fa-facebook-f"></i>Log In with Facebook</div>
+              </a>
+            </div>
+            <div class="social_login">
+              <a title="Google" href="/network/login/google">
+                <div class="login_gplus"><i class="fab fa-google"></i>Log In with Google</div>
+              </a>
+            </div>
+            <!--<div class="social_login">
+                          <a title="Twitch" ng-href="/network/login/twitch">
+                              <div class="login_twitch"><i class="fab fa-twitch"></i>Log In with Twitch</div>
+                          </a>
+                      </div>-->
+          </div>
+
+          <p class="privacy">
+            By continuing you agree to the <a title="Terms &amp; conditions" routerLink="/terms">Terms &amp; Conditions</a>
+            and <a routerLink="/privacy" title="Privacy Policy">Privacy Policy</a>. TE may send you newsletters; you can
+            always change your preferences in your profile.
+          </p>
+
+        </div>
+
+        <div class="sign-in-bottom-text">
+
+          <p class="sign-new-account-text">Already have an account? <a routerLink="/signin">Login</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div id="background-overlay"></div>
+<div id="background-img"></div>
