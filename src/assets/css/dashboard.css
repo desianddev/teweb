@@ -536,7 +536,7 @@ ul.player_follower {
 
 /** Info Column Tab Pages */
 
-.tabs-content { border-top: solid 1px #6196CC; }
+/* .tabs-content { border-top: solid 1px #6196CC; } */
 #TEfeatures .tabs-content { border-top:none;}
 
 .info_column.active.bar {
@@ -545,6 +545,7 @@ ul.player_follower {
 
 #tstyle {
     padding-top: 38px;
+    border-bottom: #6196CC solid 1px;
     /*
      position: absolute;
     top: 0; */
@@ -586,7 +587,7 @@ ul.player_follower {
     border-top: solid 1px #6196cc !important;
     border-bottom: solid 2px #1d262c !important;
     color: #fff !important;
-    margin-bottom: -1px !important;
+    margin-bottom: -3px !important;
     text-decoration: none;
     box-shadow: 0px -16px 19px -10px #0b141b;
 }

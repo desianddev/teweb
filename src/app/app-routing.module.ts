@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignInComponent } from './account/signin/sign-in.component';
 import { SignUpComponent } from './account/signup/sign-up.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
+import { UserLayoutComponent } from './layouts/user-layout/user-layout.component';
 
 const routes: Routes = [
 
@@ -15,6 +16,16 @@ const routes: Routes = [
         {
           path: '',
           loadChildren: () => import('./layouts/home-layout/home-layout.module').then(module => module.HomeLayoutModule)
+        }
+    ]
+  },
+  {
+    path: '',
+    component: UserLayoutComponent,
+    children: [
+        {
+          path: '',
+          loadChildren: () => import('./layouts/user-layout/user-layout.module').then(module => module.UserLayoutModule)
         }
     ]
   },

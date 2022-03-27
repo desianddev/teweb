@@ -11,7 +11,7 @@
         <div class="login_box_login">
 
           <div class="signin-container">
-            <form class="form-signin" autocomplete="off" (ngSubmit)="onSignupFormSubmit()">
+            <form class="form-signin" [formGroup]="signupForm" autocomplete="off" (ngSubmit)="onSignupFormSubmit()">
 
               <table class="register_table">
                 <tr>

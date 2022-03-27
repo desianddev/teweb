@@ -1,5 +1,5 @@
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,13 +13,17 @@ import { NavbarModule } from './shared/navbar/navbar.module';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { SignInComponent } from './account/signin/sign-in.component';
 import { SignUpComponent } from './account/signup/sign-up.component';
+import { UserLayoutComponent } from './layouts/user-layout/user-layout.component';
+import { GlobalErrorHandler } from './shared/services/globalErrorHandler';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
     SignUpComponent,
-    HomeLayoutComponent
+    HomeLayoutComponent,
+    UserLayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -30,9 +34,12 @@ import { SignUpComponent } from './account/signup/sign-up.component';
     CommonModule,
     SidebarModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    {provide: ErrorHandler, useClass: GlobalErrorHandler},
+  ],
   bootstrap: [
     AppComponent
 

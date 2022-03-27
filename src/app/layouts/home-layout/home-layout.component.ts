@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/cor
 import { Location } from '@angular/common';
 import 'rxjs/operators';
 import { Router } from '@angular/router';
-//import { Router, NavigationEnd, NavigationStart } from '@angular/router';
+
 
 @Component({
   selector: 'home-admin-layout',
