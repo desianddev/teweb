@@ -4,6 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-pools',
   templateUrl: './pools.component.html'
 })
+
+
 export class PoolsComponent implements OnInit {
 
   constructor() { }
@@ -11,4 +13,49 @@ export class PoolsComponent implements OnInit {
   ngOnInit() {
   }
 
+  tournament(){
+
+  }
+  StartRoundRobinHelp(){
+
+  }
+
+  showScoreboardRS(){
+
+  }
+
+  resetPool(){
+
+  }
+
+  toggleExpandScreen(){
+
+  }
+
+  launchFullscreen(){
+
+  }
+
+  showMixer(){
+
+  }
+
+  openManagePlayer(){
+
+  }
+
+  ToggleSwapMode(){
+
+  }
+  startTournament(){
+
+  }
+
+  PrintRoundScreen(){
+
+  }
+
+  spotClicked(){
+
+  }
 }

@@ -13,20 +13,20 @@
             <div class="ribbon_child bgradient"></div>
             <div class="ribbon_content small-4 medium-4 columns">
               <div class="listimg trophy"></div>
-              <p class="ng-binding">TOURNAMENTS</p>
+              <p class="ng-binding">EVENTS</p>
             </div>
           </div>
 
           <div class="small-6 medium-6 large-6 searchb pt15 columns">
             <form autocomplete="off" class="ng-pristine ng-valid">
-              <input autocomplete="off" data-step="1" data-intro="Type here to search for your tournaments in your list."
-                type="search" id="search" placeholder="Search tournaments">
+              <input autocomplete="off" data-step="1" data-intro="Type here to search for your events in your list."
+                type="search" id="search" placeholder="Search event">
             </form>
           </div>
         </div>
         <div class="tabs-bar">
           <div id="myListMenu" data-tab="">
-            <a class="create-new ng-scope" data-step="2" data-intro="Create new tournament." title="Create New" routerLink="/event-tournament"><img src="assets/img/icon_create.svg"><i>CREATE NEW</i></a>
+            <a class="create-new ng-scope" data-step="2" data-intro="Create new event." title="Create New" routerLink="/event-create"><img src="assets/img/icon_create.svg"><i>CREATE NEW</i></a>
           </div>
         </div>
       </div>
@@ -35,10 +35,10 @@
         <div class="event_card sha-box card">
           <div class="row">
             <div class="img-event medium-5 blankImage" style="background-image:url(assets/img/object1.png)">
-              <div class="name-event truncate" title=" Event Name">Tournament Name</div>
+              <div class="name-event truncate" title=" Event Name">Event Name</div>
             </div>
             <div class="txt-event medium-5">
-              <span class="tgamename">Tournament INFO.</span>
+              <span class="tgamename">EVENT INFO.</span>
               <hr class="shr3">
               <div class="clear"></div>
               <div class="tinfo">Start Date:</div>
@@ -69,7 +69,7 @@
             <span class="follow_num">22</span>
           </div>
           <div class="detail_title">
-            <div class="truncate" title="Event Name">Tournament Name</div>
+            <div class="truncate" title="Event Name">Event Name</div>
           </div>
           <div id="icons-block">
             <div>
@@ -106,14 +106,14 @@
                   </div>
                 </a>
 
-                <a href="/#!/user/view/sEvent.creatorUserId"> <span class="pname" title="Event Admin Details Name">Tournament
+                <a href="/#!/user/view/sEvent.creatorUserId"> <span class="pname" title="Event Admin Details Name">Event
                     Admin Details Name</span>
                 </a>
               </div>
               <hr>
               <div>
                 <div class="description_title btxt" data-step="6"
-                  data-intro="Event information provided by event organizer.">About Tournament</div>
+                  data-intro="Event information provided by event organizer.">About Event</div>
                 <div class="word-wrap description">
                   <p class="info_box_mp pre" title="Event description">
                     this is test event for testing molude this is test event for testing molude this is test event
@@ -135,14 +135,14 @@
               data-intro="Advertise event with the Hype Feature, Edit event, add staff, delete event, register for the event, Participants and see who registered for the event."
               class="tournament_btns">
               <div class="ctrlpnl tournament_btns_gradient pbt5">
-                <a class="orange get-hype" href="javascript:;" data-reveal-id="hype" title="Hype Event"><i class="fas fa-fire"></i>
+                <a class="orange get-hype" href="" data-reveal-id="hype" title="Hype Event"><i class="fas fa-fire"></i>
                   <span>Hype</span></a>
               </div>
               <div class="ctrlpnl tournament_btns_gradient">
                 <ul class="wrapbtnbox">
                   <li><a title="Edit Event" class="blkbkg event_btn" href="/#!/event/edit/sEvent.eventID"><i
                         class="fas fa-edit"></i> <span> Edit</span></a></li>
-                  <li><a title="Manage Staff" class="blkbkg event_btn" routerLink="/manage-staff"><i
+                  <li><a title="Manage Staff" class="blkbkg event_btn" href="/#!/event/staff/sEvent.eventID"><i
                         class="fas fa-users"></i> <span> Staff</span></a>
                   </li>
 

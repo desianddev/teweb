@@ -1,0 +1,304 @@
+<div class="" id="braintree-set">
+    <div class="tbl_frm_row">
+        <form name="settings_form">
+            <div class="row">
+                <div class="large-3 medium-12 small-12 columns column-first">
+                    <h1>Settings</h1>
+
+
+                    <h2 for="account-settings" id="labels">Account<a title="Help" href="" id="login_box_button"
+                            class="help_button"><i class="fa fa-info-circle" aria-hidden="true"></i></a></h2>
+                    <div class="flex-item">
+                        <div data-step="1"
+                            data-intro="Change the name you want to be known as. As long as it is available."
+                            class="is-floating-label">
+                            <label>Display Name</label>
+                            <input type="text" name="profile_name" id="profile_name" minlength="4" maxlength="50"
+                                required />
+                            <!-- <span class="mandatoryfld_lbl">
+                            <span class="mandatoryfld_lbl">Display name
+                                name is required.</span> <span class="mandatoryfld_lbl">Display name
+                                must be between 4 and 50 characters</span> <span class="mandatoryfld_lbl">Display name
+                                must be between 4 and 50 characters</span>
+                        </span> -->
+                        </div>
+                    </div>
+
+                    <div class="flex-item">
+                        <div data-step="2" data-intro="Email account link to TE. Can be changed."
+                            class="is-floating-label">
+                            <label class="flex-label">Email</label>
+                            <input type="text" name="profile_email" id="profile_email" disallow-spaces required />
+                            <!-- <span class="mandatoryfld_lbl">
+                            <span class="mandatoryfld_lbl">Email is required</span>
+                            <span class="mandatoryfld_lbl"> Invalid email address </span>
+                        </span> -->
+                        </div>
+                    </div>
+
+                    <div class="flex-item">
+                        <div class="is-floating-label">
+                            <label class="flex-label">Phone Number</label>
+                            <input type="text" name="profile_phoneNumber" id="profile_phoneNumber" value="" />
+                            <!-- <span id="phoneno-val" class="mandatoryfld_lbl">
+                            <span class="mandatoryfld_lbl">
+                                Invalid Phone number
+                            </span>
+                            <span class="mandatoryfld_lbl">Phone number can use only numbers</span>
+                        </span> -->
+                        </div>
+                    </div>
+
+                    <div class="flex-item">
+                        <div class="is-floating-label">
+                            <label class="flex-label">Age</label>
+                            <input type="text" name="profile_age" id='profile_age' value="25" />
+                            <!-- <span class="mandatoryfld_lbl">
+                            <span class="mandatoryfld_lbl">Age can use only numbers</span>
+                        </span> -->
+                        </div>
+                    </div>
+
+
+                    <div class="flex-row">
+                        <div class=" image-item large-6 medium-6 small-6 columns">
+                            <label class="flex-label">User Picture</label>
+                            <div class="flex-row image-row">
+                                <div id="user_image">
+                                    <img alt="Choose a picture" onclick="upload_pic_box()" src='assets/img/guest.png'
+                                        title="Choose a picture" class="image_profile_user"
+                                        id="my-account-profile-image">
+                                    <!-- <label><a onclick="upload_pic_box()" title="Change avatar" >Change Profile Image</a></label> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-column-space"></div>
+                        <div class="image-item  large-6 medium-6 small-6 columns">
+                            <label class="flex-label">Team Picture</label>
+                            <div class="flex-row image-row">
+                                <div id="container_image">
+                                    <img alt="Team Photo" src='assets/img/guest.png'
+                                        onclick="upload_pic_box('#my-team-icon-image')" title="Team Photo"
+                                        id="my-team-icon-image">
+                                    <!-- <label><a onclick="upload_pic_box('#my-team-icon-image')" title="Change avatar" >Change Team Icon Image</a></label> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="social-row flex-row">
+                        <label class="label-custom">Share with</label>
+                        <ul class="social-item">
+                            <li title="Facebook">
+                                <a data-step="3" data-intro="Link your Facebook to TE."
+                                    class="social_network_link social-button" href>
+                                    <div class="login_fb"></div> <i class="fa fa-check"></i>
+                                </a>
+                            </li>
+                            <li title="Google">
+                                <a data-step="4" data-intro="Link your Google to TE."
+                                    class="social_network_link social-button" href>
+                                    <div class="login_gplus"></div> <i class="fa fa-check"></i>
+                                </a>
+                            </li>
+                            <li title="Twitter">
+                                <a data-step="5" data-intro="Link your Twitter Account to TE." title="Twitter"
+                                    class="social_network_link social-button" href>
+                                    <div class="login_tw"></div> <i class="fa fa-check"></i>
+                                </a>
+                            </li>
+                            <!--<li title="Twitch">
+                <a   data-step="6" data-intro="Link your Twitch channel to TE." title="Twitch" class="social_network_link social-button" href ng-click="connectOrDisconnect('twitch')">
+                        <div class="login_twitch"></div>  <i ng-class="{'fa fa-check' : profile.twitchUser}"></i>
+                </a>
+            </li>-->
+                        </ul>
+                    </div>
+
+
+
+                    <div class="flex-row">
+                        <div class="flex-item">
+                            <div data-step="7"
+                                data-intro="Set location so you would be notified of any tournaments in your area.">
+                                <label class="flex-label">Location</label>
+                                <input type="text" placeholder="Location">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--
+    <div class="flex-row">
+        <div class="flex-column-space"></div>
+        <div class="flex-item">
+            <label class="flex-label">Gender</label>
+            <div class="input-block">
+                <div class="switch round tiny">
+                    <input type="radio" name="gender" id="genderM" value="M" ng-model="profile.person.sex"> <label for="genderM" class="left margin_right"></label>
+                    <p class="no_margin">Male</p>
+                </div>
+                <div class="switch round tiny">
+                    <input type="radio" name="gender" id="genderF" value="F" ng-model="profile.person.sex">
+                    <label for="genderF" class="left margin_right"></label>
+                    <p class="no_margin">Female</p>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+                    <!--<div class="tab-headers">
+        <div class="flex-row">
+            <div class="flex-tab single-label">
+                <label for="account-settings" id="labels">Notification Settings</label>
+            </div>
+        </div>
+    </div> -->
+
+                </div>
+                <div class="large-4 medium-12 small-12 columns column-second">
+                    <div data-step="8" data-intro="Control what notifications you receive for TE App.">
+                        <h1>&nbsp;</h1>
+                        <h2>Notification</h2>
+                        <!--
+    <div class="flex-row">
+        <div class="flex-item switch-block control-section">
+            <div class="flex-row input-block">
+                <label class="flex-label">Mail</label>
+                <div class="switch round tiny">
+                    <input type="checkbox" name="mailSetting" id="mailSetting" value='1' checked="checked" ng-model="profile.person.mailSetting" class="ng-empty">
+                    <label for="mailSetting" class="left margin_right"></label>
+                    <p class="no_margin"></p>
+                </div>
+            </div>
+        </div>
+         <div class="flex-item switch-block">
+            <div class="flex-row input-block">
+                <label class="flex-label"></label>
+                <div class="switch round tiny">
+                </div>
+            </div>
+        </div>
+    </div>-->
+                        <div class="flex-row">
+                            <div class="flex-item switch-block control-section">
+                                <div class="flex-row input-block">
+                                    <label class="flex-label">Messaging</label>
+                                    <div class="switch round tiny">
+                                        <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+                                        <label class="switch-paddle" for="exampleSwitch">
+                                          <span class="show-for-sr">Download Kittens</span>
+                                        </label>
+                                      </div>
+                                </div>
+                            </div>
+                            <!--  <div class="flex-item switch-block">
+            <div class="flex-row input-block">
+                <label class="flex-label"></label>
+                <div class="switch round tiny">
+                </div>
+            </div>
+        </div>-->
+                        </div>
+                        <div class="flex-row">
+                           
+
+                            <div class="flex-item switch-block switch-wide setting-checkbox">
+                                <div class="flex-row input-block">
+                                    <label class="flex-label" style="color: rgba(255, 255, 255, 0.54);">New followers
+                                    </label>
+                                    <div class="switch round tiny">
+                                        <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+                                        <label class="switch-paddle" for="exampleSwitch">
+                                          <span class="show-for-sr">Download Kittens</span>
+                                        </label>
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-item switch-block switch-wide setting-checkbox">
+                                <div class="flex-row input-block">
+                                    <label class="flex-label" style="color: rgba(255, 255, 255, 0.54);">Registration
+                                        approvals
+                                    </label>
+                                    <div class="switch round tiny">
+                                        <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+                                        <label class="switch-paddle" for="exampleSwitch">
+                                          <span class="show-for-sr">Download Kittens</span>
+                                        </label>
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-item switch-block switch-wide setting-checkbox">
+                                <div class="flex-row input-block">
+                                    <label class="flex-label" style="color: rgba(255, 255, 255, 0.54);">Messages from members 
+                                    </label>
+                                    <div class="switch round tiny">
+                                        <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+                                        <label class="switch-paddle" for="exampleSwitch">
+                                          <span class="show-for-sr">Download Kittens</span>
+                                        </label>
+                                      </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="flex-row btn_secondary_set">
+                        <div id="set-tool-cont" data-step="9"
+                            data-intro="Upgrade to Casual and Pro to get more out of TE.">
+                            <span class="btn_secondary">type</span>
+
+                            <!-- <a title="Subscribe" href="" class="btn_secondary btn_primary" id="subscribe_user" ng-click="subscribe()">{{type}}</a> -->
+                            <a title="Unsubscribe" href="" class="btn_secondary btn_alert"
+                                id="unsubscribe_user">Unsubscribe</a>
+                            <span class="btn_secondary btn_alert">Unsubscribed</span>
+                            <div class="flex-label" style="color: rgba(255, 255, 255, 0.54);margin-top:10px">
+                                <span>Start Date : startDate </span>
+                                <span>&nbsp;&nbsp;|&nbsp;&nbsp;End Date : endDate </span>
+                            </div>
+                        </div>
+
+                        <div id="set-tool-cont">
+                            <hr>
+                            <a title="Subscribe" href="" class="btn_secondary btn_primary"
+                                id="subscribe_user">Subscription
+                                Packages</a>
+                            <hr>
+                        </div>
+
+                        <div id="set-tool-cont" data-step="10"
+                            data-intro="Connect your Stripe account to sign up for tournaments that require a registration fee.">
+                            <a title="Connect with Stripe" class="btn_secondary btn_primary" href="">Connect with
+                                Stripe</a>
+                            <a title="Connected with Stripe" class="btn_secondary btn_primary" href="">Already Connected
+                                with Stripe</a>
+                            <a data-step="11" href="javascript:;"
+                                data-intro="Enter users you don't wish to see anymore here." title="Blocked List"
+                                type="button" class="btn_secondary btn_alert" id="block_list"
+                                click="showBlockedPlayers()">
+                                <i class="fas fa-ban"></i>Blocked List
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-5 medium-12 small-12 columns column-third">
+                    <div class="button-set-float-bottom" id="buttonset">
+                        <button title="Change Password" id="changePwd" value="ChangePassword" type="button"
+                            class="btn btn-block red">
+                            <span>Change Password</span>
+                        </button>
+                        <button title="Cancel" id="cancel" value="Cancel" type="button" class="btn btn-block red">
+                            <span>Cancel</span>
+                        </button>
+                        <button type="submit" class="btn btn-block"><span>Save</span></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
